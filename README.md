@@ -1,46 +1,149 @@
-<p align="center">
-  <a href="https://reacttraining.com/react-router/">
-    <img alt="react-router" src="https://reacttraining.com/react-router/android-chrome-144x144.png" width="144">
-  </a>
-</p>
+# React Router [![Travis][build-badge]][build] [![npm package][npm-badge]][npm]
 
-<h3 align="center">
-  React Router
-</h3>
+<img src="/logo/vertical@2x.png" height="150"/>
 
-<p align="center">
-  Declarative routing for <a href="https://facebook.github.io/react">React</a>
-</p>
+React Router is a complete routing library for [React](https://facebook.github.io/react).
 
-<p align="center">
-  <a href="https://www.npmjs.com/package/react-router"><img src="https://img.shields.io/npm/v/react-router.svg?style=flat-square"></a>
-  <a href="https://www.npmjs.com/package/react-router"><img src="https://img.shields.io/npm/dm/react-router.svg?style=flat-square"></a>
-  <a href="https://travis-ci.org/ReactTraining/react-router"><img src="https://img.shields.io/travis/ReactTraining/react-router/master.svg?style=flat-square"></a>
-</p>
+React Router keeps your UI in sync with the URL. It has a simple API with powerful features like lazy code loading, dynamic route matching, and location transition handling built right in. Make the URL your first thought, not an after-thought.
 
-## Docs
+[![Codecov][codecov-badge]][codecov]
+[![Discord][discord-badge]][discord]
 
-**[View the docs here](https://reacttraining.com/react-router)**
+### Docs & Help
 
-[Migrating from 2.x/3.x?](/packages/react-router/docs/guides/migrating.md)
+- [Tutorial – do this first!](https://github.com/reactjs/react-router-tutorial)
+- [Guides and API docs](/docs)
+- [Troubleshooting guide](https://github.com/reactjs/react-router/blob/master/docs/Troubleshooting.md)
+- [Changelog](/CHANGES.md)
+- [Stack Overflow](http://stackoverflow.com/questions/tagged/react-router)
+- [CodePen boilerplate](http://codepen.io/anon/pen/xwQZdy?editors=001) for bug reports
 
-[3.x docs](https://github.com/ReactTraining/react-router/blob/v3/docs)
+**Older Versions:**
 
-[2.x docs](https://github.com/ReactTraining/react-router/blob/v2.8.1/docs)
+- 0.13.x - [docs](https://github.com/reactjs/react-router/tree/v0.13.6/doc) / [guides](https://github.com/reactjs/react-router/tree/v0.13.6/docs/guides) / [code](https://github.com/reactjs/react-router/tree/v0.13.6) / [upgrade guide](https://github.com/reactjs/react-router/blob/master/upgrade-guides/v1.0.0.md)
+- 1.0.x - [docs](https://github.com/reactjs/react-router/tree/1.0.x/docs) / [code](https://github.com/reactjs/react-router/tree/1.0.x) / [upgrade guide](https://github.com/reactjs/react-router/blob/master/upgrade-guides/v2.0.0.md)
 
-## Packages
+For questions and support, please visit [our channel on Reactiflux](https://discord.gg/0ZcbPKXt5bYaNQ46) or [Stack Overflow](http://stackoverflow.com/questions/tagged/react-router).
 
-This repository is a monorepo that we manage using [Lerna](https://github.com/lerna/lerna). That means that we actually publish [several packages](/packages) to npm from the same codebase, including:
+### Browser Support
 
-| Package                                                | Version                                                                                                                                   | Docs                                                                                                                                                                                                                                                                          | Description                                                                        |
-| ------------------------------------------------------ | ----------------------------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------- |
-| [`react-router`](/packages/react-router)               | [![npm](https://img.shields.io/npm/v/react-router.svg?style=flat-square)](https://www.npmjs.com/package/react-router)                     | [![](https://img.shields.io/badge/API%20Docs-site-green.svg?style=flat-square)](https://reacttraining.com/react-router/core/guides/quick-start) [![](https://img.shields.io/badge/API%20Docs-markdown-lightgrey.svg?style=flat-square)](/packages/react-router/docs)          | The core of React Router                                                           |
-| [`react-router-dom`](/packages/react-router-dom)       | [![npm](https://img.shields.io/npm/v/react-router-dom.svg?style=flat-square)](https://www.npmjs.com/package/react-router-dom)             | [![](https://img.shields.io/badge/API%20Docs-site-green.svg?style=flat-square)](https://reacttraining.com/react-router/web/guides/quick-start) [![](https://img.shields.io/badge/API%20Docs-markdown-lightgrey.svg?style=flat-square)](/packages/react-router-dom/docs)       | DOM bindings for React Router                                                      |
-| [`react-router-native`](/packages/react-router-native) | [![npm](https://img.shields.io/npm/v/react-router-native.svg?style=flat-square)](https://www.npmjs.com/package/react-router-native)       | [![](https://img.shields.io/badge/API%20Docs-site-green.svg?style=flat-square)](https://reacttraining.com/react-router/native/guides/quick-start) [![](https://img.shields.io/badge/API%20Docs-markdown-lightgrey.svg?style=flat-square)](/packages/react-router-native/docs) | [React Native](https://facebook.github.io/react-native/) bindings for React Router |
-| [`react-router-config`](/packages/react-router-config) | [![npm](https://img.shields.io/npm/v/react-router-config.svg?style=flat-square)](https://www.npmjs.com/package/react-router-config)       | [![](https://img.shields.io/badge/API%20Docs-readme-orange.svg?style=flat-square)](/packages/react-router-config/#readme)                                                                                                                                                     | Static route config helpers                                                        |
+We support all browsers and environments where React runs.
 
-> **Redux users:** The `react-router-redux` package is now deprecated. See [Redux Integration](https://reacttraining.com/react-router/web/guides/redux-integration) for a better approach.
+### Installation
 
-## About
+Using [npm](https://www.npmjs.com/):
 
-`react-router` is developed and maintained by [React Training](https://reacttraining.com) and many [amazing contributors](https://github.com/ReactTraining/react-router/graphs/contributors). If you're interested in learning more about what React can do for your company, please [get in touch](mailto:hello@reacttraining.com)!
+    $ npm install --save react-router
+
+Then with a module bundler like [webpack](https://webpack.github.io/) that supports either CommonJS or ES2015 modules, use as you would anything else:
+
+```js
+// using an ES6 transpiler, like babel
+import { Router, Route, Link } from 'react-router'
+
+// not using an ES6 transpiler
+var Router = require('react-router').Router
+var Route = require('react-router').Route
+var Link = require('react-router').Link
+```
+
+The UMD build is also available on [unpkg](https://unpkg.com):
+
+```html
+<script src="https://unpkg.com/react-router/umd/ReactRouter.min.js"></script>
+```
+
+You can find the library on `window.ReactRouter`.
+
+### What's it look like?
+
+```js
+import React from 'react'
+import { render } from 'react-dom'
+import { Router, Route, Link, browserHistory } from 'react-router'
+
+const App = React.createClass({/*...*/})
+const About = React.createClass({/*...*/})
+const NoMatch = React.createClass({/*...*/})
+
+const Users = React.createClass({
+  render() {
+    return (
+      <div>
+        <h1>Users</h1>
+        <div className="master">
+          <ul>
+            {/* use Link to route around the app */}
+            {this.state.users.map(user => (
+              <li key={user.id}><Link to={`/user/${user.id}`}>{user.name}</Link></li>
+            ))}
+          </ul>
+        </div>
+        <div className="detail">
+          {this.props.children}
+        </div>
+      </div>
+    )
+  }
+})
+
+const User = React.createClass({
+  componentDidMount() {
+    this.setState({
+      // route components are rendered with useful information, like URL params
+      user: findUserById(this.props.params.userId)
+    })
+  },
+
+  render() {
+    return (
+      <div>
+        <h2>{this.state.user.name}</h2>
+        {/* etc. */}
+      </div>
+    )
+  }
+})
+
+// Declarative route configuration (could also load this config lazily
+// instead, all you really need is a single root route, you don't need to
+// colocate the entire config).
+render((
+  <Router history={browserHistory}>
+    <Route path="/" component={App}>
+      <Route path="about" component={About}/>
+      <Route path="users" component={Users}>
+        <Route path="/user/:userId" component={User}/>
+      </Route>
+      <Route path="*" component={NoMatch}/>
+    </Route>
+  </Router>
+), document.getElementById('root'))
+```
+
+See more in the [Introduction](/docs/Introduction.md), [Guides](/docs/guides/README.md), and [Examples](/examples).
+
+### Versioning and Stability
+
+We want React Router to be a stable dependency that’s easy to keep current. We take the same approach to versioning as React.js itself: [React Versioning Scheme](https://facebook.github.io/react/blog/2016/02/19/new-versioning-scheme.html).
+
+### Thanks
+
+Thanks to [our sponsors](/SPONSORS.md) for supporting the development of
+React Router.
+
+React Router was initially inspired by Ember's fantastic router. Many thanks to the Ember team.
+
+Also, thanks to [BrowserStack](https://www.browserstack.com/) for providing the infrastructure that allows us to run our build in real browsers.
+
+[build-badge]: https://img.shields.io/travis/reactjs/react-router/master.svg?style=flat-square
+[build]: https://travis-ci.org/reactjs/react-router
+
+[npm-badge]: https://img.shields.io/npm/v/react-router.svg?style=flat-square
+[npm]: https://www.npmjs.org/package/react-router
+
+[codecov-badge]: https://img.shields.io/codecov/c/github/reactjs/react-router/master.svg?style=flat-square
+[codecov]: https://codecov.io/gh/reactjs/react-router
+
+[discord-badge]: https://img.shields.io/badge/Discord-join%20chat%20%E2%86%92-738bd7.svg?style=flat-square
+[discord]: https://discord.gg/0ZcbPKXt5bYaNQ46
